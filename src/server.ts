@@ -1,5 +1,8 @@
 import dotenv from 'dotenv'
-dotenv.config();
+
+if(process.env.NODE_ENV !== 'development'){
+    dotenv.config();
+}
 
 import express, { Request, Response } from "express";
 import { User } from './models/User';
